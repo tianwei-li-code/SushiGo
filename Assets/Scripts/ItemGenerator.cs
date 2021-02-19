@@ -8,9 +8,9 @@ public class ItemGenerator : MonoBehaviour{
     public ObjectPooler[] objectPools;
     public float minDistance;
     public float maxDistance;
-    public float distance;
 
     private int itemSelector;
+    private float distance;
     void Start(){
 
     }

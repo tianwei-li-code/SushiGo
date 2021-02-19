@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 1212
+  controlID: 2744
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 442}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 1172
+  controlID: 2745
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 1173
+  controlID: 2707
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,9 +312,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.5347824, y: -0.030041374, z: -0.19091797}
+    m_Target: {x: -0.5518961, y: -0.023783697, z: -5.0143256}
     speed: 2
-    m_Value: {x: 7.5347824, y: -0.030041374, z: -0.19091797}
+    m_Value: {x: -0.5518961, y: -0.023783697, z: -5.0143256}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -364,9 +364,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.351085
+    m_Target: 0.91053164
     speed: 2
-    m_Value: 1.351085
+    m_Value: 0.91053164
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 14676
+  m_LastSelectedObjectID: 14642
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -565,10 +565,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 7557e400879f8d84980776254f01940f,
+  m_AnimatorController: {fileID: 9100000, guid: cdfaf34ed05980b41ae40d2e6465300b,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 3843883536575621241, guid: 7557e400879f8d84980776254f01940f,
+  - m_Target: {fileID: -6935975024877464764, guid: cdfaf34ed05980b41ae40d2e6465300b,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -648,19 +648,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Porjects\SushiGo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 783b0000
-    m_LastClickedID: 15224
+    m_SelectedIDs: 7c3b0000
+    m_LastClickedID: 15228
     m_ExpandedIDs: 00000000663b0000683b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -714,8 +714,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 54390000
-    m_LastClickedInstanceID: 14676
+    m_SelectedInstanceIDs: 32390000
+    m_LastClickedInstanceID: 14642
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004c3a0000a439000000000000963a0000
     m_RenameOverlay:
@@ -833,5 +833,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 14676
+  m_LastInspectedObjectInstanceID: 14642
   m_LastVerticalScrollValue: 0

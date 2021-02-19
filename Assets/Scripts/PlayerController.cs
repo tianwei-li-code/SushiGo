@@ -6,14 +6,21 @@ public class PlayerController : MonoBehaviour{
     public ParticleSystem dust;
     public float moveSpeed;
     public float jumpForce;
+    public int jumpNum;
     public bool grounded;
     public LayerMask whatIsGround;
+    public float speedMultiplier;
+    public float maxSpeedMultiplier;
+    public int speedIncreaseTime;
+    
 
     private Rigidbody2D myRigidbody;
     private Collider2D myCollider;
     private Animator myAnimator;
     private bool isJumping;
-    private int jumpNum;
+    private int jumpNumCounter;
+    private float speedIncreaseTimeCount;
+    private float originSpeed;
 
     // Use this for initialization
     void Start(){
@@ -21,7 +28,18 @@ public class PlayerController : MonoBehaviour{
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
         isJumping = false;
-        jumpNum = 1;
+        jumpNumCounter = jumpNum;
+        speedIncreaseTimeCount = speedIncreaseTime;
+        originSpeed = moveSpeed;
+        StartCoroutine(Time());
+    }
+
+    // Time countdown
+    IEnumerator Time(){
+        while(speedIncreaseTimeCount >= 0){
+            yield return new WaitForSeconds(1);
+            speedIncreaseTimeCount--;
+        }
     }
 
     // Update is called once per frame
@@ -32,17 +50,25 @@ public class PlayerController : MonoBehaviour{
 
         // Press Space to jump only when player is on the ground
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
-        if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && jumpNum>0){
+
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && jumpNumCounter>0){
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
             isJumping = true;
-            jumpNum--;
+            jumpNumCounter--;
         }
         
         // Create dust effect and recover jump number when player land on the ground
         if(isJumping  && myRigidbody.velocity.y<0.001 && grounded){
             CreateDust();
             isJumping = false;
-            jumpNum++;
+            jumpNumCounter = jumpNum;
+        }
+
+        // Speed up
+        if(speedIncreaseTimeCount == 0){
+            moveSpeed = moveSpeed * speedMultiplier > originSpeed * maxSpeedMultiplier ? 
+                        moveSpeed : moveSpeed * speedMultiplier;
+            speedIncreaseTimeCount = speedIncreaseTime;
         }
 
         // Set animator's value

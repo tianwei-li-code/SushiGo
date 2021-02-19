@@ -503,10 +503,14 @@ MonoBehaviour:
   dust: {fileID: 610906844}
   moveSpeed: 2
   jumpForce: 3.5
+  jumpNum: 1
   grounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  speedMultiplier: 1.1
+  maxSpeedMultiplier: 2
+  speedIncreaseTime: 30
 --- !u!95 &572434211
 Animator:
   serializedVersion: 3
@@ -700,7 +704,6 @@ MonoBehaviour:
   - {fileID: 1152771539}
   minDistance: 3
   maxDistance: 4
-  distance: 0
 --- !u!4 &891480446
 Transform:
   m_ObjectHideFlags: 0

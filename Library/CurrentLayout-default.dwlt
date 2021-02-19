@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 1323
+  controlID: 3068
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 442}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 1303
+  controlID: 3069
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 1398
+  controlID: 3070
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -423,23 +423,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ac390000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 18daffff64fbffff78390000
+      m_SelectedIDs: 6e470000
+      m_LastClickedID: 18286
+      m_ExpandedIDs: 22d0ffff36d0ffffeed0ffff64fbffff50390000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Ghost3
-        m_OriginalName: Ghost3
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -9720
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.30496922, y: -0.15226786, z: -4.966299}
+    m_Target: {x: -0.6963066, y: -0.03374511, z: -5.0144043}
     speed: 2
-    m_Value: {x: 0.26148534, y: -0.13226399, z: -4.9597926}
+    m_Value: {x: -0.6963066, y: -0.03374511, z: -5.0144043}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -537,9 +537,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.5109774
+    m_Target: 0.91053164
     speed: 2
-    m_Value: 1.4459114
+    m_Value: 0.91053164
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 14676
+  m_LastSelectedObjectID: 14642
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -709,10 +709,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 7557e400879f8d84980776254f01940f,
+  m_AnimatorController: {fileID: 9100000, guid: cdfaf34ed05980b41ae40d2e6465300b,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 3843883536575621241, guid: 7557e400879f8d84980776254f01940f,
+  - m_Target: {fileID: -6935975024877464764, guid: cdfaf34ed05980b41ae40d2e6465300b,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -765,19 +765,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Environment/Sprites
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Environment/Sprites
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Porjects\SushiGo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a03b0000
-    m_LastClickedID: 15264
+    m_SelectedIDs: 7c3b0000
+    m_LastClickedID: 15228
     m_ExpandedIDs: 00000000663b0000683b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
