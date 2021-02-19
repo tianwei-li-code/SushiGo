@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour{
+    public GameManager gameManager;
     public ParticleSystem dust;
     public float moveSpeed;
     public float jumpForce;
     public int jumpNum;
-    public bool grounded;
     public LayerMask whatIsGround;
     public float speedMultiplier;
     public float maxSpeedMultiplier;
-    public int speedIncreaseTime;
     
 
     private Rigidbody2D myRigidbody;
     private Collider2D myCollider;
     private Animator myAnimator;
+    private bool grounded;
     private bool isJumping;
     private int jumpNumCounter;
-    private float speedIncreaseTimeCount;
     private float originSpeed;
+    private float animSpeed;
 
     // Use this for initialization
     void Start(){
@@ -29,17 +29,8 @@ public class PlayerController : MonoBehaviour{
         myAnimator = GetComponent<Animator>();
         isJumping = false;
         jumpNumCounter = jumpNum;
-        speedIncreaseTimeCount = speedIncreaseTime;
         originSpeed = moveSpeed;
-        StartCoroutine(Time());
-    }
-
-    // Time countdown
-    IEnumerator Time(){
-        while(speedIncreaseTimeCount >= 0){
-            yield return new WaitForSeconds(1);
-            speedIncreaseTimeCount--;
-        }
+        animSpeed = 1;
     }
 
     // Update is called once per frame
@@ -64,21 +55,40 @@ public class PlayerController : MonoBehaviour{
             jumpNumCounter = jumpNum;
         }
 
-        // Speed up
-        if(speedIncreaseTimeCount == 0){
-            moveSpeed = moveSpeed * speedMultiplier > originSpeed * maxSpeedMultiplier ? 
-                        moveSpeed : moveSpeed * speedMultiplier;
-            speedIncreaseTimeCount = speedIncreaseTime;
-        }
-
         // Set animator's value
         myAnimator.SetFloat("velocityX",myRigidbody.velocity.x);
         myAnimator.SetFloat("velocityY",myRigidbody.velocity.y);
         myAnimator.SetBool("grounded",grounded);
+        myAnimator.SetFloat("animSpeed",animSpeed);
+    }
+
+    // Increase the move speed and the animation speed
+    public void SpeedUp(){
+        if(moveSpeed * speedMultiplier < originSpeed * maxSpeedMultiplier){
+            moveSpeed = moveSpeed * speedMultiplier;
+            animSpeed = animSpeed * speedMultiplier;
+        }
+    }
+
+    // Reset the animator status and speed after respawn
+    public void Respawn(){
+        myAnimator.SetBool("dead",false);
+        moveSpeed = originSpeed;
+        animSpeed = 1;
     }
 
     // Create the dust effect
-    void CreateDust(){
+    private void CreateDust(){
         dust.Play();
+    }
+
+    // Dead condition check
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Killbox"){
+            moveSpeed = 0;
+            myAnimator.SetTrigger("hurt");
+            myAnimator.SetBool("dead",true);
+            gameManager.RestartGame();
+        }
     }
 }
