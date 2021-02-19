@@ -12,8 +12,10 @@ public class PlatformDestroyer : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+        
+        // Deactive the platform
         if(transform.position.x < platformDestructionPoint.transform.position.x){
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

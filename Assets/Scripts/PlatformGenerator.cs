@@ -6,6 +6,7 @@ public class PlatformGenerator : MonoBehaviour{
 
     public GameObject platform;
     public Transform generationPoint;
+    public ObjectPooler objectPool;
 
     private float platformWidth;
 
@@ -18,7 +19,10 @@ public class PlatformGenerator : MonoBehaviour{
     void Update(){
         if(transform.position.x < generationPoint.position.x){
             transform.position = new Vector3(transform.position.x + platformWidth, transform.position.y, transform.position.z);
-            Instantiate(platform, transform.position, transform.rotation);
+            GameObject newPlatform = objectPool.GetPooledObject();
+            newPlatform.transform.position = transform.position;
+            newPlatform.transform.rotation = transform.rotation;
+            newPlatform.SetActive(true);
         }
     }
 }
