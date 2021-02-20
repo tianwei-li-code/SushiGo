@@ -2,11 +2,14 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - GameManager
     - ItemGenerator
     - ObjectPooler
+    - PickUpPoints
     - PlatformDestroyer
     - PlatformGenerator
     - PlayerController
+    - ScoreManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -27,6 +30,13 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Endless.unity:
     - Class: 1
@@ -43,6 +53,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 70
@@ -58,18 +70,38 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11266}
+    - Class: 114
       Script: {instanceID: 11410}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 11556}
+    - Class: 114
+      Script: {instanceID: 11610}
+    - Class: 114
+      Script: {instanceID: 12270}
+    - Class: 114
+      Script: {instanceID: 12280}
+    - Class: 114
+      Script: {instanceID: 12362}
     - Class: 114
       Script: {instanceID: 12774}
     - Class: 114
-      Script: {instanceID: 12894}
+      Script: {instanceID: 12778}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 14196}
+      Script: {instanceID: 13068}
+    - Class: 114
+      Script: {instanceID: 13108}
+    - Class: 114
+      Script: {instanceID: 13758}
+    - Class: 114
+      Script: {instanceID: 14202}
+    - Class: 114
+      Script: {instanceID: 14372}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -82,6 +114,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -284,6 +322,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 9c29cd918dd4dfb8b9cd5e69b20926ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PickUpPoints
+  - hash:
+      serializedVersion: 2
       Hash: 5f170942ee57c7a568f5bcfc7521adea
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -356,7 +400,13 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: 498cb8cfad154932a04f525b0d567ca5
+      Hash: 931a8d84b9cb06af4ed5f7264f23aba8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreManager
+  - hash:
+      serializedVersion: 2
+      Hash: 233c3701e8992a9f5dacbdd4f0bb6f87
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -402,6 +452,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraController
+  - hash:
+      serializedVersion: 2
+      Hash: ba45ae9d3e296ea4eaec3b5c0d5c4e47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -512,7 +568,7 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
-      Hash: 1b735be4535f1ecec6d6201f86256c99
+      Hash: e4d1ee9d90dc7c0c0d5ee15cbd6cf21d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemGenerator
