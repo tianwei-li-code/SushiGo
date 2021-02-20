@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour{
     private Vector3 itemStartPoint;
     public PlayerController player;
     private Vector3 playerStarterPoint;
+    private ScoreManager scoreManager;
 
     public int speedIncreaseTime;
     private float speedIncreaseTimeCount;
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour{
 
         speedIncreaseTimeCount = speedIncreaseTime;
         StartCoroutine(Time());
+
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -59,6 +62,9 @@ public class GameManager : MonoBehaviour{
 
         // Reset speed increase time counter
         speedIncreaseTimeCount = speedIncreaseTime;
+
+        // Reset the score
+        scoreManager.scoreCount = 0;
     }
 
     // Moon change time countdown/ Speed up time count down

@@ -25,10 +25,10 @@ public class ItemGenerator : MonoBehaviour{
             transform.position = new Vector3(transform.position.x + distance, transform.position.y, 
                                             transform.position.z);
             
-            GameObject newPlatform = objectPools[itemSelector].GetPooledObject();
-            newPlatform.transform.position = transform.position;
-            newPlatform.transform.rotation = transform.rotation;
-            newPlatform.SetActive(true);
+            GameObject newItem = objectPools[itemSelector].GetPooledObject();
+            newItem.transform.position = transform.position;
+            newItem.transform.rotation = transform.rotation;
+            newItem.SetActive(true);
         }
     }
 }
