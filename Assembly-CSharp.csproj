@@ -43,6 +43,7 @@
      <Compile Include="Assets\Scripts\ItemEliminator.cs" />
      <Compile Include="Assets\Scripts\ItemGenerator.cs" />
      <Compile Include="Assets\Scripts\ManaController.cs" />
+     <Compile Include="Assets\Scripts\MoonController.cs" />
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />
      <Compile Include="Assets\Scripts\PickUpHeart.cs" />
      <Compile Include="Assets\Scripts\PickUpPoints.cs" />
