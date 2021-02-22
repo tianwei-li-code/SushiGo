@@ -9,12 +9,14 @@ public class ItemGenerator : MonoBehaviour{
     public float minDistance;
     public float maxDistance;
     public Transform maxHeightPoint;
+    public float marginOfBuff;
 
     private int itemSelector;
     private float distance;
     private float minHeight;
     private float maxHeight;
     private float newHeight;
+    private GameObject buff;
 
     void Start(){
         minHeight = transform.position.y;
@@ -41,5 +43,13 @@ public class ItemGenerator : MonoBehaviour{
             newItem.transform.rotation = transform.rotation;
             newItem.SetActive(true);
         }
+    }
+
+    // If buff is in the queue, generate it at random distance after new item 
+    public void addBuff(GameObject buff){
+        this.buff = buff;
+        buff.transform.position = new Vector3(transform.position.x + Random.Range(marginOfBuff, 
+                                                maxDistance-marginOfBuff), minHeight, transform.position.z);
+        buff.SetActive(true);
     }
 }

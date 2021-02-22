@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1798267708372659082}
   - component: {fileID: 8097952794868979354}
   - component: {fileID: 4580793271655597238}
+  - component: {fileID: 7439104760395206971}
   m_Layer: 9
   m_Name: Ghost4
   m_TagString: Killbox
@@ -133,6 +134,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &7439104760395206971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389544827224399490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3680353117740885180
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +159,7 @@ GameObject:
   - component: {fileID: 3477363607339627907}
   - component: {fileID: 4488466370989874549}
   - component: {fileID: 963672689955516017}
+  - component: {fileID: 6757534759676284988}
   m_Layer: 9
   m_Name: Ghost1
   m_TagString: Killbox
@@ -266,6 +280,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &6757534759676284988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680353117740885180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3832445043264724300
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +468,7 @@ GameObject:
   - component: {fileID: 2060223137292173206}
   - component: {fileID: 98623006262819820}
   - component: {fileID: 2439022928041023052}
+  - component: {fileID: 7884319877149102352}
   m_Layer: 9
   m_Name: Ghost2
   m_TagString: Killbox
@@ -562,6 +589,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &7884319877149102352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849742032386825031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5354770035629904580
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +614,7 @@ GameObject:
   - component: {fileID: 4849162796491060764}
   - component: {fileID: 1738427881860933643}
   - component: {fileID: 3701922872747875356}
+  - component: {fileID: 2634764461184268559}
   m_Layer: 9
   m_Name: Ghost3
   m_TagString: Killbox
@@ -695,6 +735,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &2634764461184268559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354770035629904580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5676098091622444210
 GameObject:
   m_ObjectHideFlags: 0

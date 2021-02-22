@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4116492161459222712}
-  - component: {fileID: 4116492161459222713}
   m_Layer: 0
   m_Name: GhostsTiltLeft
   m_TagString: Untagged
@@ -34,19 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4116492161459222713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4116492161459222714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245e03e0064f0994d8923230ce6d1afb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformDestructionPoint: {fileID: 0}
 --- !u!1 &4116492162107237605
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +45,8 @@ GameObject:
   - component: {fileID: 4116492162107237601}
   - component: {fileID: 4116492162107237602}
   - component: {fileID: 4116492162107237603}
+  - component: {fileID: 1511191182393950203}
+  - component: {fileID: 3645430836338905739}
   m_Layer: 9
   m_Name: Ghost2
   m_TagString: Killbox
@@ -166,6 +154,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1511191182393950203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116492162107237605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e03e0064f0994d8923230ce6d1afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
+--- !u!114 &3645430836338905739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116492162107237605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4116492163208222114
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +191,8 @@ GameObject:
   - component: {fileID: 4116492163208222126}
   - component: {fileID: 4116492163208222127}
   - component: {fileID: 4116492163208222112}
+  - component: {fileID: 6319716168101227957}
+  - component: {fileID: 3101839742673900847}
   m_Layer: 9
   m_Name: Ghost3
   m_TagString: Killbox
@@ -285,6 +300,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6319716168101227957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116492163208222114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e03e0064f0994d8923230ce6d1afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
+--- !u!114 &3101839742673900847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116492163208222114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4116492163271172260
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +337,8 @@ GameObject:
   - component: {fileID: 4116492163271172256}
   - component: {fileID: 4116492163271172257}
   - component: {fileID: 4116492163271172258}
+  - component: {fileID: 4942066906259470555}
+  - component: {fileID: 2735698164537973925}
   m_Layer: 9
   m_Name: Ghost1
   m_TagString: Killbox
@@ -404,3 +446,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4942066906259470555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116492163271172260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e03e0064f0994d8923230ce6d1afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
+--- !u!114 &2735698164537973925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116492163271172260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

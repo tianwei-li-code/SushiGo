@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour{
     public LayerMask whatIsGround;
     public float speedMultiplier;
     public float maxSpeedMultiplier;
+    public float animSpeed;
     
 
     private Rigidbody2D myRigidbody;
@@ -20,7 +21,6 @@ public class PlayerController : MonoBehaviour{
     private bool isJumping;
     private int jumpNumCounter;
     private float originSpeed;
-    private float animSpeed;
 
     // Use this for initialization
     void Start(){

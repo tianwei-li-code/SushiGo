@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Killbox
   - Sushi
+  - Mana
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - 
   - Ground
   - Enemy
-  - 
-  - 
+  - Player
+  - Friend
   - 
   - 
   - 

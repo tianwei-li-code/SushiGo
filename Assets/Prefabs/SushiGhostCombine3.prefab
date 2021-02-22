@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 4034797380345794630}
   - component: {fileID: 4034797380345794629}
   - component: {fileID: 64439498905901722}
+  - component: {fileID: 8211408303574889317}
   m_Layer: 9
   m_Name: Ghost1
   m_TagString: Killbox
@@ -511,6 +512,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &8211408303574889317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034797380345794627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4034797380425590085
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,6 +537,7 @@ GameObject:
   - component: {fileID: 4034797380425590088}
   - component: {fileID: 4034797380425590087}
   - component: {fileID: 5903511777657807490}
+  - component: {fileID: 6899089226830356624}
   m_Layer: 9
   m_Name: Ghost3
   m_TagString: Killbox
@@ -644,6 +658,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &6899089226830356624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034797380425590085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4034797381606298626
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +683,7 @@ GameObject:
   - component: {fileID: 4034797381606298629}
   - component: {fileID: 4034797381606298628}
   - component: {fileID: 3163950113703138040}
+  - component: {fileID: 5030609378351239746}
   m_Layer: 9
   m_Name: Ghost2
   m_TagString: Killbox
@@ -777,6 +804,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &5030609378351239746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034797381606298626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c50cd7f98206149a3b95501cdac6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4034797381620975709
 GameObject:
   m_ObjectHideFlags: 0
