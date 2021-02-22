@@ -11,9 +11,8 @@ public class GameManager : MonoBehaviour{
     public PlayerController player;
     private Vector3 playerStarterPoint;
     private ScoreManager scoreManager;
+    private MoonController moonController;
 
-    public int speedIncreaseTime;
-    private float speedIncreaseTimeCount;
     private PlatformDestroyer[] items;
 
     // Start is called before the first frame update
@@ -21,21 +20,13 @@ public class GameManager : MonoBehaviour{
         platformStartPoint = platformGenerator.position;
         itemStartPoint = itemGenerator.position;
         playerStarterPoint = player.transform.position;
-
-        speedIncreaseTimeCount = speedIncreaseTime;
-        StartCoroutine(Time());
-
         scoreManager = FindObjectOfType<ScoreManager>();
+        moonController = FindObjectOfType<MoonController>();
     }
 
     // Update is called once per frame
     void Update(){
-
-        // Increase player's speed
-        if(speedIncreaseTimeCount == 0){
-            player.SpeedUp();
-            speedIncreaseTimeCount = speedIncreaseTime;
-        }
+        
     }
 
     // Reset the game
@@ -60,18 +51,10 @@ public class GameManager : MonoBehaviour{
         player.gameObject.SetActive(true);
         player.Respawn();
 
-        // Reset speed increase time counter
-        speedIncreaseTimeCount = speedIncreaseTime;
-
         // Reset the score
         scoreManager.scoreCount = 0;
-    }
 
-    // Moon change time countdown/ Speed up time count down
-    private IEnumerator Time(){
-        while(speedIncreaseTimeCount >= 0){
-            yield return new WaitForSeconds(1);
-            speedIncreaseTimeCount--;
-        }
+        // Reset the moon
+        moonController.reset();
     }
 }

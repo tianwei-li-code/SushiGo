@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour{
     private bool isJumping;
     private int jumpNumCounter;
     private float originSpeed;
+    private float currentSpeed;
+    private float originAnimSpeed;
+    private float currentAnimSpeed;
 
     // Use this for initialization
     void Start(){
@@ -29,8 +32,11 @@ public class PlayerController : MonoBehaviour{
         myAnimator = GetComponent<Animator>();
         isJumping = false;
         jumpNumCounter = jumpNum;
-        originSpeed = moveSpeed;
         animSpeed = 1;
+        originSpeed = moveSpeed;
+        currentSpeed = moveSpeed;
+        originAnimSpeed = animSpeed;
+        currentAnimSpeed = animSpeed;
     }
 
     // Update is called once per frame
@@ -62,11 +68,19 @@ public class PlayerController : MonoBehaviour{
         myAnimator.SetFloat("animSpeed",animSpeed);
     }
 
+    public void IncreaseSpeed(float SpeedMultiplier){
+        moveSpeed = moveSpeed * SpeedMultiplier;
+        animSpeed = animSpeed * SpeedMultiplier;
+    }
+
     // Increase the move speed and the animation speed
     public void SpeedUp(){
+        moveSpeed = currentSpeed;
+        animSpeed = currentAnimSpeed;
         if(moveSpeed * speedMultiplier < originSpeed * maxSpeedMultiplier){
-            moveSpeed = moveSpeed * speedMultiplier;
-            animSpeed = animSpeed * speedMultiplier;
+            IncreaseSpeed(speedMultiplier);
+            currentSpeed = moveSpeed;
+            currentAnimSpeed = animSpeed;
         }
     }
 
@@ -74,7 +88,9 @@ public class PlayerController : MonoBehaviour{
     public void Respawn(){
         myAnimator.SetBool("dead",false);
         moveSpeed = originSpeed;
-        animSpeed = 1;
+        animSpeed = originAnimSpeed;
+        currentSpeed = moveSpeed;
+        currentAnimSpeed = animSpeed;
     }
 
     // Create the dust effect

@@ -48,8 +48,8 @@ public class ItemGenerator : MonoBehaviour{
     // If buff is in the queue, generate it at random distance after new item 
     public void addBuff(GameObject buff){
         this.buff = buff;
-        buff.transform.position = new Vector3(transform.position.x + Random.Range(marginOfBuff, 
-                                                maxDistance-marginOfBuff), minHeight, transform.position.z);
+        buff.transform.position = new Vector3(transform.position.x + Random.Range(marginOfBuff, maxDistance-marginOfBuff),
+                                                Random.Range(minHeight, maxHeight), transform.position.z);
         buff.SetActive(true);
     }
 }
