@@ -27,7 +27,7 @@ public class PickUpPoints : MonoBehaviour{
 
     // Check if player get the sushi
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.name == "Player"){
+        if(other.gameObject.tag == "Player"){
             scoreManager.AddScore(scoreToGive);
             getSushi = true;
         }

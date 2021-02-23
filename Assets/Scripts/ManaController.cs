@@ -20,6 +20,7 @@ public class ManaController : MonoBehaviour{
         manaCollider = GetComponent<Collider2D>();
         manaAnimator = GetComponent<Animator>();
         nano = FindObjectOfType<PlayerController>();
+        reset();
         gameObject.SetActive(false);
     }
 
@@ -33,6 +34,12 @@ public class ManaController : MonoBehaviour{
         manaRigidbody.velocity = new Vector2(moveSpeed, manaRigidbody.velocity.y);
 
         if(transform.position.x >= manaRecoverPoint.transform.position.x){
+            reset();
+        }
+    }
+
+    public void reset(){
+        if(gameObject.activeInHierarchy){
             gameObject.SetActive(false);
         }
     }

@@ -55,7 +55,13 @@ public class PlayerController : MonoBehaviour{
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
             isJumping = true;
             jumpNumCounter--;
+
+            // Double jump animation
+            if(jumpNum > 1 && jumpNumCounter == jumpNum - 2){
+                myAnimator.SetTrigger("doubleJump");
+            }
         }
+        
         
         // Create dust effect and recover jump number when player land on the ground
         if(isJumping  && myRigidbody.velocity.y<0.001 && grounded){
@@ -98,6 +104,24 @@ public class PlayerController : MonoBehaviour{
         currentSpeed = moveSpeed;
         currentAnimSpeed = animSpeed;
         tsuyoTsuyoMode = false;
+        disableDoubleJump();
+    }
+
+    // Enable double jump
+    public void enableDoubleJump(){
+        jumpNum = 2;
+        jumpNumCounter++;
+    }
+
+    // Disable double jump
+    public void disableDoubleJump(){
+        if(jumpNum > 1){
+            jumpNum = 1;
+
+            if( jumpNumCounter > 0){
+                jumpNumCounter--;
+            }
+        }
     }
 
     // Create the dust effect

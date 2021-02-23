@@ -7,8 +7,6 @@ public class FriendsGenerator : MonoBehaviour{
     public Transform maxHeightPoint;
 
     public GameObject mana;
-    public GameObject oto;
-    public GameObject komori;
 
     private float minHeight;
     private float maxHeight;
@@ -29,5 +27,12 @@ public class FriendsGenerator : MonoBehaviour{
         mana.transform.position = generationPoint.position;
         mana.transform.rotation = generationPoint.rotation;
         mana.SetActive(true);
+    }
+
+    public void generateKomori(GameObject komori){
+        komori.transform.position = new Vector3(generationPoint.position.x, 
+                                                Random.Range(minHeight, maxHeight), generationPoint.position.z);
+        komori.transform.rotation = generationPoint.rotation;
+        komori.SetActive(true);
     }
 }

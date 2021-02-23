@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour{
     private Vector3 playerStarterPoint;
     private ScoreManager scoreManager;
     private MoonController moonController;
-
+    private KomoriBatController komoriBatController;
     private PlatformDestroyer[] items;
 
     // Start is called before the first frame update
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour{
         playerStarterPoint = player.transform.position;
         scoreManager = FindObjectOfType<ScoreManager>();
         moonController = FindObjectOfType<MoonController>();
+        komoriBatController = FindObjectOfType<KomoriBatController>();
     }
 
     // Update is called once per frame
@@ -37,6 +38,9 @@ public class GameManager : MonoBehaviour{
     public IEnumerator RestartGameCo(){
         yield return new WaitForSeconds(0.8f);
         player.gameObject.SetActive(false);
+
+        // Reset komori bat
+        komoriBatController.reset();
 
         // Destroy all items who have PlatformDestroyer Script
         items = FindObjectsOfType<PlatformDestroyer>();

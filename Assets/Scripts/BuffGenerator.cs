@@ -10,12 +10,14 @@ public class BuffGenerator : MonoBehaviour{
     private int timeInterval;
     private int buffSelector;
     private ItemGenerator itemGenerator;
+    private FriendsGenerator friendsGenerator;
 
 
     // Start is called before the first frame update
     void Start(){
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
         itemGenerator = FindObjectOfType<ItemGenerator>();
+        friendsGenerator = FindObjectOfType<FriendsGenerator>();
         StartCoroutine(Counter());
     }
 
@@ -29,8 +31,8 @@ public class BuffGenerator : MonoBehaviour{
 
             if(newBuff.tag == "Mana"){
                 itemGenerator.addBuff(newBuff);
-            } else {
-                // oto and komori
+            } else if(newBuff.tag == "Komori"){
+                friendsGenerator.generateKomori(newBuff);
             }
         }
     }

@@ -42,6 +42,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\ItemEliminator.cs" />
      <Compile Include="Assets\Scripts\ItemGenerator.cs" />
+     <Compile Include="Assets\Scripts\KomoriBatController.cs" />
      <Compile Include="Assets\Scripts\ManaController.cs" />
      <Compile Include="Assets\Scripts\MoonController.cs" />
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />
