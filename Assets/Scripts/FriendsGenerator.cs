@@ -29,10 +29,10 @@ public class FriendsGenerator : MonoBehaviour{
         mana.SetActive(true);
     }
 
-    public void generateKomori(GameObject komori){
-        komori.transform.position = new Vector3(generationPoint.position.x, 
+    public void generateFriend(GameObject friend){
+        friend.transform.position = new Vector3(generationPoint.position.x, 
                                                 Random.Range(minHeight, maxHeight), generationPoint.position.z);
-        komori.transform.rotation = generationPoint.rotation;
-        komori.SetActive(true);
+        friend.transform.rotation = generationPoint.rotation;
+        friend.SetActive(true);
     }
 }

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class PickUpHeart : MonoBehaviour{
 
-    public FriendsGenerator buffGenerator;
+    private FriendsGenerator buffGenerator;
     private Animator heartAnimator;
 
     // Start is called before the first frame update
     void Start(){
         heartAnimator = GetComponent<Animator>();
         buffGenerator = FindObjectOfType<FriendsGenerator>();
-        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

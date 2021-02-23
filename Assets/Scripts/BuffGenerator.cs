@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuffGenerator : MonoBehaviour{
     public int minTimeInterval;
     public int maxTimeInterval;
-    public GameObject[] buffs;
+    public ObjectPooler[] buffs;
 
     private int timeInterval;
     private int buffSelector;
@@ -15,26 +15,30 @@ public class BuffGenerator : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-        timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
         itemGenerator = FindObjectOfType<ItemGenerator>();
         friendsGenerator = FindObjectOfType<FriendsGenerator>();
+        reset();
         StartCoroutine(Counter());
     }
 
     // Update is called once per frame
     void Update(){
         if(timeInterval == 0){
-            timeInterval = Random.Range(minTimeInterval, maxTimeInterval); 
-
+            reset();
+            
             buffSelector = Random.Range(0, buffs.Length);
-            GameObject newBuff = buffs[buffSelector];
+            GameObject newBuff = buffs[buffSelector].GetPooledObject();
 
             if(newBuff.tag == "Mana"){
                 itemGenerator.addBuff(newBuff);
-            } else if(newBuff.tag == "Komori"){
-                friendsGenerator.generateKomori(newBuff);
+            } else {
+                friendsGenerator.generateFriend(newBuff);
             }
         }
+    }
+
+    public void reset(){
+        timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
     }
 
     private IEnumerator Counter(){

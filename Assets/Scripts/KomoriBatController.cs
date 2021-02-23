@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KomoriBatController : MonoBehaviour{
     public float buffLastTime;
-    public GameObject terminalPoint;
     public float speedMultiplier;
 
     private float buffLastTimeCount;
@@ -13,29 +12,35 @@ public class KomoriBatController : MonoBehaviour{
     private Transform playerTransform;
     private bool canBeActivated;
     private Rigidbody2D komoriRigidbody;
+    private GameObject terminalPoint;
 
     // Start is called before the first frame update
     void Start(){
         player = FindObjectOfType<PlayerController>();
         komoriRigidbody = GetComponent<Rigidbody2D>();
+        terminalPoint = GameObject.FindGameObjectWithTag("GenerationPoint");
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         reset();
-        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update(){
+
+        // When buff activated
         if(playerTransform != null && buffLastTimeCount > 0){
             komoriRigidbody.velocity = new Vector2(0, komoriRigidbody.velocity.y);
             float distance = (transform.position - playerTransform.position).sqrMagnitude;
-            speed = distance < 0.1f ? player.moveSpeed * 0.9f : player.moveSpeed * 1.1f;
+            if(distance < 0.05f){
+                speed = player.moveSpeed * 0.9f;
+            } else if (distance > 0.35f){
+                speed = player.moveSpeed * 1.05f;
+            }
             transform.position = Vector2.MoveTowards(transform.position, playerTransform.position,
                                                         speed * Time.deltaTime);
         } 
         
-        // If not being activated, disable player's double jump ability and move to the terminal point
+        // If not being activated, move to the terminal point
         else if (buffLastTimeCount == 0){
-            player.disableDoubleJump();
             speed = player.moveSpeed * speedMultiplier;
             komoriRigidbody.velocity = new Vector2(speed, komoriRigidbody.velocity.y);
         }
@@ -64,10 +69,14 @@ public class KomoriBatController : MonoBehaviour{
         }
     }
 
+    // Buff last time counter, if buff end, disable player's double jump
     private IEnumerator Counter(){
         while(buffLastTimeCount > 0){
             yield return new WaitForSeconds(1);
             buffLastTimeCount--;
+            if(buffLastTimeCount == 0){
+                player.disableDoubleJump();
+            }
         }
     }
 }

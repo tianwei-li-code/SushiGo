@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PickUpPoints : MonoBehaviour{
     public int scoreToGive;
+    public bool getSushi = false;
 
     private Vector3 sushiUIPosition;
     private ScoreManager scoreManager;
-    private bool getSushi = false;
     private Vector3 originPosition;
 
     // Start is called before the first frame update
@@ -26,14 +26,15 @@ public class PickUpPoints : MonoBehaviour{
     }
 
     // Check if player get the sushi
+    // Check if oto is activated and get sushi
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Player"){
-            scoreManager.AddScore(scoreToGive);
+        if(other.gameObject.tag == "Player" || (other.gameObject.tag == "Oto" && 
+                                                !other.gameObject.GetComponent<OtoDragonController>().canBeActivated)){
             getSushi = true;
         }
     }
 
-    private void MoveSushi(){
+    public void MoveSushi(){
 
         // Transform Sushi UI position to the world position
         sushiUIPosition = Camera.main.ScreenToWorldPoint(scoreManager.getSushiUI().transform.position);
@@ -45,6 +46,7 @@ public class PickUpPoints : MonoBehaviour{
         if ((transform.position - (sushiUIPosition + Vector3.forward)).sqrMagnitude < 0.1f){
             getSushi = false;
             gameObject.SetActive(false);
+            scoreManager.AddScore(scoreToGive);
         }
     }
 }
