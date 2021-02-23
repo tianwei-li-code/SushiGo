@@ -5655,6 +5655,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   speedMultiplier: 1.1
+  boostSpeedMultiplier: 1.5
   maxSpeedMultiplier: 2
   animSpeed: 0
 --- !u!95 &572434211
@@ -6787,7 +6788,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 3362252604941107711, guid: b505e45f980d6794caca007c989d3690,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6814,6 +6815,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moonChangeTime: 15
   sprites:
+  - {fileID: -3484893886891066422, guid: b505e45f980d6794caca007c989d3690, type: 3}
+  - {fileID: 2505600340263225115, guid: b505e45f980d6794caca007c989d3690, type: 3}
   - {fileID: 3362252604941107711, guid: b505e45f980d6794caca007c989d3690, type: 3}
   - {fileID: -1325578989010111409, guid: b505e45f980d6794caca007c989d3690, type: 3}
   - {fileID: 1228930340566358445, guid: b505e45f980d6794caca007c989d3690, type: 3}
@@ -6821,10 +6824,7 @@ MonoBehaviour:
   - {fileID: 7699978436774145253, guid: b505e45f980d6794caca007c989d3690, type: 3}
   - {fileID: -5787588587161777183, guid: b505e45f980d6794caca007c989d3690, type: 3}
   - {fileID: 2441626922208646576, guid: b505e45f980d6794caca007c989d3690, type: 3}
-  - {fileID: -3484893886891066422, guid: b505e45f980d6794caca007c989d3690, type: 3}
-  - {fileID: 2505600340263225115, guid: b505e45f980d6794caca007c989d3690, type: 3}
-  indexOfBloodMoon: 8
-  bloodMoonSpeedMultiplier: 1.3
+  indexOfBloodMoon: 1
 --- !u!4 &1582933328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4569844593050803789, guid: bb5a60a2be11c5848a79794423358fdb,

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour{
     public int jumpNum;
     public LayerMask whatIsGround;
     public float speedMultiplier;
+    public float boostSpeedMultiplier;
     public float maxSpeedMultiplier;
     public float animSpeed;
     
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour{
     private float currentSpeed;
     private float originAnimSpeed;
     private float currentAnimSpeed;
+    private bool tsuyoTsuyoMode;
 
     // Use this for initialization
     void Start(){
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour{
         currentSpeed = moveSpeed;
         originAnimSpeed = animSpeed;
         currentAnimSpeed = animSpeed;
+        tsuyoTsuyoMode = false;
     }
 
     // Update is called once per frame
@@ -66,17 +69,20 @@ public class PlayerController : MonoBehaviour{
         myAnimator.SetFloat("velocityY",myRigidbody.velocity.y);
         myAnimator.SetBool("grounded",grounded);
         myAnimator.SetFloat("animSpeed",animSpeed);
+        myAnimator.SetBool("tsuyoTsuyoMode",tsuyoTsuyoMode);
     }
 
-    public void IncreaseSpeed(float SpeedMultiplier){
-        moveSpeed = moveSpeed * SpeedMultiplier;
-        animSpeed = animSpeed * SpeedMultiplier;
+    // Enter tsuyo-tsuyo mode, increase speed and change the sprites
+    public void startTsuyoTsuyoMode(){
+        IncreaseSpeed(boostSpeedMultiplier);
+        tsuyoTsuyoMode = true;
     }
 
     // Increase the move speed and the animation speed
     public void SpeedUp(){
         moveSpeed = currentSpeed;
         animSpeed = currentAnimSpeed;
+        tsuyoTsuyoMode = false;
         if(moveSpeed * speedMultiplier < originSpeed * maxSpeedMultiplier){
             IncreaseSpeed(speedMultiplier);
             currentSpeed = moveSpeed;
@@ -91,6 +97,7 @@ public class PlayerController : MonoBehaviour{
         animSpeed = originAnimSpeed;
         currentSpeed = moveSpeed;
         currentAnimSpeed = animSpeed;
+        tsuyoTsuyoMode = false;
     }
 
     // Create the dust effect
@@ -106,5 +113,11 @@ public class PlayerController : MonoBehaviour{
             myAnimator.SetBool("dead",true);
             gameManager.RestartGame();
         }
+    }
+
+    // Increase player's speed
+     private void IncreaseSpeed(float SpeedMultiplier){
+        moveSpeed = moveSpeed * SpeedMultiplier;
+        animSpeed = animSpeed * SpeedMultiplier;
     }
 }

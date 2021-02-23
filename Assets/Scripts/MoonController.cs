@@ -6,7 +6,6 @@ public class MoonController : MonoBehaviour{
     public int moonChangeTime;
     public Sprite[] sprites;
     public int indexOfBloodMoon;
-    public float bloodMoonSpeedMultiplier;
 
     private float moonChangeTimeCount;
     private int spriteIndex;
@@ -16,12 +15,9 @@ public class MoonController : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-        spriteIndex = 0;
-        moonChangeTimeCount = moonChangeTime;
         StartCoroutine(Counter());
         player = FindObjectOfType<PlayerController>();
-        speedIncreasing = true;
-        boosting = false;
+        reset();
     }
 
     // Update is called once per frame
@@ -36,7 +32,7 @@ public class MoonController : MonoBehaviour{
 
         // If it's blood moon, boost player's speed and increase player's speed permanently after blood moon
         if(spriteIndex % sprites.Length == indexOfBloodMoon && !boosting){
-            player.IncreaseSpeed(bloodMoonSpeedMultiplier);
+            player.startTsuyoTsuyoMode();
             boosting = true;
             speedIncreasing = false;
         } else if (spriteIndex % sprites.Length == (indexOfBloodMoon + 1) % sprites.Length  && !speedIncreasing){
@@ -48,10 +44,10 @@ public class MoonController : MonoBehaviour{
 
     public void reset(){
         moonChangeTimeCount = moonChangeTime;
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
         speedIncreasing = true;
         boosting = false;
         spriteIndex = 0;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex % sprites.Length];
     }
 
     private IEnumerator Counter(){
