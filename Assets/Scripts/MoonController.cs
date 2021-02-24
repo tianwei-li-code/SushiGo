@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoonController : MonoBehaviour{
-    public int moonChangeTime;
+    public float moonChangeTime;
     public Sprite[] sprites;
     public int indexOfBloodMoon;
+    public int indexOfDarkMoon;
 
     private float moonChangeTimeCount;
+    private float mireiTimeCounter;
     private int spriteIndex;
     private PlayerController player;
+    private MireiEyeGenerator mireiEyeGenerator;
     private bool speedIncreasing;
     private bool boosting;
+    private bool mireiTime;
 
     // Start is called before the first frame update
     void Start(){
         StartCoroutine(Counter());
         player = FindObjectOfType<PlayerController>();
-        reset();
+        mireiEyeGenerator = FindObjectOfType<MireiEyeGenerator>();
+        Reset();
     }
 
     // Update is called once per frame
@@ -40,20 +45,41 @@ public class MoonController : MonoBehaviour{
             speedIncreasing = true;
             boosting = false;
         }
+
+        // If it's dark moon, generate mirei eye
+        if(spriteIndex % sprites.Length == indexOfDarkMoon && !mireiTime){
+            mireiTime = true;
+            StartCoroutine("MireiTime");
+        } else if (spriteIndex % sprites.Length == (indexOfDarkMoon + 1) % sprites.Length){
+            mireiTime = false;
+        }
     }
 
-    public void reset(){
+    public void Reset(){
         moonChangeTimeCount = moonChangeTime;
         speedIncreasing = true;
         boosting = false;
+        mireiTime = false;
         spriteIndex = 0;
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex % sprites.Length];
+        StopCoroutine("MireiTime");
     }
 
     private IEnumerator Counter(){
         while(moonChangeTimeCount >= 0){
             yield return new WaitForSeconds(1);
             moonChangeTimeCount--;
+        }
+    }
+
+    private IEnumerator MireiTime(){
+        mireiTimeCounter = Random.Range(0.5f, moonChangeTime);
+        while(mireiTimeCounter > 0){
+            yield return new WaitForSeconds(0.1f);
+            mireiTimeCounter-=0.1f;
+            if(mireiTimeCounter <= 0){
+                mireiEyeGenerator.GenerateMireiEye();
+            }
         }
     }
 }

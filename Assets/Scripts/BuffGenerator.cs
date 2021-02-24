@@ -17,14 +17,14 @@ public class BuffGenerator : MonoBehaviour{
     void Start(){
         itemGenerator = FindObjectOfType<ItemGenerator>();
         friendsGenerator = FindObjectOfType<FriendsGenerator>();
-        reset();
+        Reset();
         StartCoroutine(Counter());
     }
 
     // Update is called once per frame
     void Update(){
         if(timeInterval == 0){
-            reset();
+            Reset();
             
             buffSelector = Random.Range(0, buffs.Length);
             GameObject newBuff = buffs[buffSelector].GetPooledObject();
@@ -37,7 +37,7 @@ public class BuffGenerator : MonoBehaviour{
         }
     }
 
-    public void reset(){
+    public void Reset(){
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
     }
 

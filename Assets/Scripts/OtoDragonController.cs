@@ -22,14 +22,14 @@ public class OtoDragonController : MonoBehaviour{
         player = FindObjectOfType<PlayerController>();
         otoRigidbody = GetComponent<Rigidbody2D>();
         otoCollider = GetComponent<CircleCollider2D>();
-        terminalPoint = GameObject.FindGameObjectWithTag("GenerationPoint");
+        terminalPoint = GameObject.FindGameObjectWithTag("ItemRecoverPoint");
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         defaultRadius = otoCollider.radius;
-        reset();
+        Reset();
     }
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
 
         // When buff activated
         if(playerTransform != null && buffLastTimeCount > 0){
@@ -52,12 +52,12 @@ public class OtoDragonController : MonoBehaviour{
 
         // When arrived terminal point, deactivate the game object and reset canBeActivated status
         if (transform.position.x > terminalPoint.transform.position.x){
-            reset();
+            Reset();
             gameObject.SetActive(false);
         }
     }
 
-    public void reset(){
+    public void Reset(){
         if(gameObject.activeInHierarchy){
             canBeActivated = true;
             buffLastTimeCount = 0;
@@ -77,7 +77,7 @@ public class OtoDragonController : MonoBehaviour{
         }
     }
     
-    // Buff last time counter, when buff end, disable collider to 0 to avoid geting sushi
+    // Buff last time counter, when buff end, disable collider to avoid geting sushi
     private IEnumerator Counter(){
         while(buffLastTimeCount > 0){
             yield return new WaitForSeconds(1);

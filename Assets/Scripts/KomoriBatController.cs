@@ -18,13 +18,13 @@ public class KomoriBatController : MonoBehaviour{
     void Start(){
         player = FindObjectOfType<PlayerController>();
         komoriRigidbody = GetComponent<Rigidbody2D>();
-        terminalPoint = GameObject.FindGameObjectWithTag("GenerationPoint");
+        terminalPoint = GameObject.FindGameObjectWithTag("ItemRecoverPoint");
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        reset();
+        Reset();
     }
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
 
         // When buff activated
         if(playerTransform != null && buffLastTimeCount > 0){
@@ -47,12 +47,12 @@ public class KomoriBatController : MonoBehaviour{
 
         // When arrived terminal point, deactivate the game object and reset canBeActivated status
         if (transform.position.x > terminalPoint.transform.position.x){
-            reset();
+            Reset();
             gameObject.SetActive(false);
         }
     }
 
-    public void reset(){
+    public void Reset(){
         if(gameObject.activeInHierarchy){
             canBeActivated = true;
             buffLastTimeCount = 0;

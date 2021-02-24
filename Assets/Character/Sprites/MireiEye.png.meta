@@ -8,6 +8,108 @@ TextureImporter:
   - first:
       213: -7918979165124352428
     second: MireiEye_1
+  - first:
+      213: -4443610201636002725
+    second: MireiEye_2
+  - first:
+      213: -92659499899076233
+    second: MireiEye_3
+  - first:
+      213: -6334287066832654397
+    second: MireiEye_4
+  - first:
+      213: -4455519749580430251
+    second: MireiEye_5
+  - first:
+      213: -1835670352471350037
+    second: MireiEye_6
+  - first:
+      213: -3270837724658011029
+    second: MireiEye_7
+  - first:
+      213: 398719879133546286
+    second: MireiEye_8
+  - first:
+      213: 7014487144645078337
+    second: MireiEye_9
+  - first:
+      213: 7861969684772991864
+    second: MireiEye_10
+  - first:
+      213: 2309923076022114643
+    second: MireiEye_11
+  - first:
+      213: -3198079770306468585
+    second: MireiEye_12
+  - first:
+      213: 1099151850677997791
+    second: MireiEye_13
+  - first:
+      213: -6365909232614263517
+    second: MireiEye_14
+  - first:
+      213: 6114372155122583659
+    second: MireiEye_15
+  - first:
+      213: 5847116468563057399
+    second: MireiEye_16
+  - first:
+      213: 3342273915608992810
+    second: MireiEye_17
+  - first:
+      213: -3968359235379734981
+    second: MireiEye_18
+  - first:
+      213: 5251344970211657870
+    second: MireiEye_19
+  - first:
+      213: -7291904230398381019
+    second: MireiEye_20
+  - first:
+      213: 1000989351250567211
+    second: MireiEye_21
+  - first:
+      213: 7412960739153050956
+    second: MireiEye_22
+  - first:
+      213: -4429643225639998934
+    second: MireiEye_23
+  - first:
+      213: -659222390439511211
+    second: MireiEye_24
+  - first:
+      213: 6085474164112276996
+    second: MireiEye_25
+  - first:
+      213: 4652168670061902322
+    second: MireiEye_26
+  - first:
+      213: -8709264011113635332
+    second: MireiEye_27
+  - first:
+      213: 884511054517436901
+    second: MireiEye_28
+  - first:
+      213: -902331212678504354
+    second: MireiEye_29
+  - first:
+      213: 2229841309380871627
+    second: MireiEye_30
+  - first:
+      213: -2155379846695521453
+    second: MireiEye_31
+  - first:
+      213: -1119233720495035173
+    second: MireiEye_32
+  - first:
+      213: 2947421892959650472
+    second: MireiEye_33
+  - first:
+      213: 2195581577002037505
+    second: MireiEye_34
+  - first:
+      213: -400756895475774952
+    second: MireiEye_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,12 +210,12 @@ TextureImporter:
       name: MireiEye_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 21
-        width: 21
+        x: 1
+        y: 1112
+        width: 594
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +231,12 @@ TextureImporter:
       name: MireiEye_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 21
-        width: 21
+        x: 601
+        y: 1112
+        width: 594
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,6 +244,720 @@ TextureImporter:
       bones: []
       spriteID: 4562b07e7622a1290800000000000000
       internalID: -7918979165124352428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1048
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b542f2b90102552c0800000000000000
+      internalID: -4443610201636002725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_3
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 1048
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771437ffcaec6bef0800000000000000
+      internalID: -92659499899076233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 984
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfa61429771818a0800000000000000
+      internalID: -6334287066832654397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_5
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 984
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5546584e460da22c0800000000000000
+      internalID: -4455519749580430251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 920
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4aa3c4a836686e0800000000000000
+      internalID: -1835670352471350037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_7
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 920
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64ffc74b66ab92d0800000000000000
+      internalID: -3270837724658011029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 856
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2744a81e99888500800000000000000
+      internalID: 398719879133546286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_9
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 856
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d2d1ac4e6785160800000000000000
+      internalID: 7014487144645078337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 792
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873b8c716c35b1d60800000000000000
+      internalID: 7861969684772991864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_11
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 792
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35996c49cce7e0020800000000000000
+      internalID: 2309923076022114643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 728
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715258f94632e93d0800000000000000
+      internalID: -3198079770306468585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_13
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 728
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd010edd8c8f04f00800000000000000
+      internalID: 1099151850677997791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 664
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325b5ade74fb7a7a0800000000000000
+      internalID: -6365909232614263517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_15
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 664
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b680f9a641d9ad450800000000000000
+      internalID: 6114372155122583659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 600
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa9905e271252150800000000000000
+      internalID: 5847116468563057399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_17
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 600
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c8de90b64226e20800000000000000
+      internalID: 3342273915608992810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 536
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36dc0afc4e8de8c0800000000000000
+      internalID: -3968359235379734981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_19
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 536
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8800867d6680e840800000000000000
+      internalID: 5251344970211657870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 472
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524bfe29cb3fdca90800000000000000
+      internalID: -7291904230398381019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_21
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 472
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b202d31f28a34ed00800000000000000
+      internalID: 1000989351250567211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 408
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d7227448020e660800000000000000
+      internalID: 7412960739153050956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_23
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 408
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a230e94feb682c0800000000000000
+      internalID: -4429643225639998934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 344
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b7ed58ab8f9d6f0800000000000000
+      internalID: -659222390439511211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_25
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 344
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ebab19282f37450800000000000000
+      internalID: 6085474164112276996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 280
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9bd36d1c2df8040800000000000000
+      internalID: 4652168670061902322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_27
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 280
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf16a7a868a722780800000000000000
+      internalID: -8709264011113635332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 216
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e10b642e1a664c00800000000000000
+      internalID: 884511054517436901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_29
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 216
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50ec86fa864a73f0800000000000000
+      internalID: -902331212678504354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 152
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5832f4bdcf1fe10800000000000000
+      internalID: 2229841309380871627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_31
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 152
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3537da9f27d8612e0800000000000000
+      internalID: -2155379846695521453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 88
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc21457cdea770f0800000000000000
+      internalID: -1119233720495035173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_33
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 88
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2c115789857e820800000000000000
+      internalID: 2947421892959650472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_34
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 24
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1013994cfc5487e10800000000000000
+      internalID: 2195581577002037505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MireiEye_35
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 24
+        width: 594
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ac0e31ab9307af0800000000000000
+      internalID: -400756895475774952
       vertices: []
       indices: 
       edges: []

@@ -56,9 +56,9 @@ public class GameManager : MonoBehaviour{
         scoreManager.scoreCount = 0;
 
         // Reset the moon
-        moonController.reset();
+        moonController.Reset();
 
         // Reset the buff generator
-        buffGenerator.reset();
+        buffGenerator.Reset();
     }
 }

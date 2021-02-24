@@ -1,10 +1,20 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BuffGenerator
     - CameraController
+    - FriendsGenerator
     - GameManager
+    - ItemEliminator
     - ItemGenerator
+    - KomoriBatController
+    - ManaController
+    - MireiEyeController
+    - MireiEyeGenerator
+    - MoonController
     - ObjectPooler
+    - OtoDragonController
+    - PickUpHeart
     - PickUpPoints
     - PlatformDestroyer
     - PlatformGenerator
@@ -23,8 +33,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -72,33 +84,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11412}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 12270}
+      Script: {instanceID: 11604}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 11618}
+    - Class: 114
+      Script: {instanceID: 11722}
+    - Class: 114
+      Script: {instanceID: 12162}
     - Class: 114
       Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 12362}
+      Script: {instanceID: 12290}
     - Class: 114
-      Script: {instanceID: 12774}
+      Script: {instanceID: 12372}
     - Class: 114
-      Script: {instanceID: 12778}
+      Script: {instanceID: 12538}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 13068}
+      Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 13108}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 13758}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 14202}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 13122}
+    - Class: 114
+      Script: {instanceID: 13134}
+    - Class: 114
+      Script: {instanceID: 13438}
+    - Class: 114
+      Script: {instanceID: 13776}
+    - Class: 114
+      Script: {instanceID: 14220}
+    - Class: 114
+      Script: {instanceID: 14390}
+    - Class: 114
+      Script: {instanceID: 14494}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -128,6 +160,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 60933f03eca39fc8a3050ec8178d4157
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KomoriBatController
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -202,10 +240,22 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: bcf99bf703c63b5f590509bc258c829f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OtoDragonController
+  - hash:
+      serializedVersion: 2
       Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: f5601dd0090d62153dd26222f12d17ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FriendsGenerator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -230,6 +280,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PickUpHeart
   - hash:
       serializedVersion: 2
       Hash: 523ce309f50d9eee6a8fc0e2f86c9c97
@@ -316,13 +372,19 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 44a1ed16182bc364b586c03720319b67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManaController
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 9c29cd918dd4dfb8b9cd5e69b20926ec
+      Hash: ab8d8fe347e63059d850ce9c5018bc0a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickUpPoints
@@ -382,6 +444,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: c2f9f75c2f0f4ebd2a6987b87005629f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MireiEyeGenerator
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -406,7 +474,7 @@ ScriptsOnlyBuild:
     className: ScoreManager
   - hash:
       serializedVersion: 2
-      Hash: 233c3701e8992a9f5dacbdd4f0bb6f87
+      Hash: ae9c70aa3d35bd058375954429204c40
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -416,6 +484,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemEliminator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -454,10 +528,16 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: ba45ae9d3e296ea4eaec3b5c0d5c4e47
+      Hash: 6a757c12646d0d0aa65aabff7797f63e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 9364f1081cdec0b46b8b97ec3e07d131
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MireiEyeController
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -520,6 +600,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 1ebf4226bc9b4e84c2ab8f228d026594
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BuffGenerator
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -568,7 +654,7 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
-      Hash: e4d1ee9d90dc7c0c0d5ee15cbd6cf21d
+      Hash: 7a65537e99cc6e4a64cac73a9802f226
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemGenerator
@@ -662,7 +748,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 2452b157f2b94dd8dac16a5ff7f22b1e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoonController
   platform: 5
   scenePathNames:
   - Assets/Scenes/Endless.unity
-  playerPath: C:/Users/94742/Desktop/test/SushiGoGo.exe
+  playerPath: C:/Users/94742/Desktop/SushiGo_0.01/SushiGoGo.exe

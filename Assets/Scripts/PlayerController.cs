@@ -124,18 +124,27 @@ public class PlayerController : MonoBehaviour{
         }
     }
 
+    public Rigidbody2D GetRigidbody2D(){
+        return myRigidbody;
+    }
+
     // Create the dust effect
     private void CreateDust(){
         dust.Play();
     }
 
+    // Player die
+    public void Die(){
+        moveSpeed = 0;
+        myAnimator.SetTrigger("hurt");
+        myAnimator.SetBool("dead",true);
+        gameManager.RestartGame();
+    }
+
     // Dead condition check
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Killbox"){
-            moveSpeed = 0;
-            myAnimator.SetTrigger("hurt");
-            myAnimator.SetBool("dead",true);
-            gameManager.RestartGame();
+            Die();
         }
     }
 

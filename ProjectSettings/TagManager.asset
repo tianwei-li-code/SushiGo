@@ -9,7 +9,8 @@ TagManager:
   - Mana
   - Komori
   - Oto
-  - GenerationPoint
+  - EyePosition
+  - ItemRecoverPoint
   layers:
   - Default
   - TransparentFX
