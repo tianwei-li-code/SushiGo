@@ -33,10 +33,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -82,55 +80,55 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11270}
     - Class: 114
-      Script: {instanceID: 11286}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11412}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11604}
-    - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11608}
     - Class: 114
       Script: {instanceID: 11618}
     - Class: 114
-      Script: {instanceID: 11722}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12166}
     - Class: 114
-      Script: {instanceID: 12290}
+      Script: {instanceID: 12284}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12542}
     - Class: 114
       Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 13086}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13126}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13138}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 14220}
+      Script: {instanceID: 13780}
     - Class: 114
-      Script: {instanceID: 14390}
+      Script: {instanceID: 14224}
     - Class: 114
-      Script: {instanceID: 14494}
+      Script: {instanceID: 14394}
+    - Class: 114
+      Script: {instanceID: 14498}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128

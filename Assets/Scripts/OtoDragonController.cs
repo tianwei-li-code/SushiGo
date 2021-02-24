@@ -38,7 +38,7 @@ public class OtoDragonController : MonoBehaviour{
             if(distance < 0.05f){
                 speed = player.moveSpeed * 0.9f;
             } else if (distance > 0.35f){
-                speed = player.moveSpeed * 1.05f;
+                speed = player.moveSpeed * 1.15f;
             }
             transform.position = Vector2.MoveTowards(transform.position, playerTransform.position,
                                                         speed * Time.deltaTime);

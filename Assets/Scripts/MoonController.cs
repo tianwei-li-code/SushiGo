@@ -7,6 +7,7 @@ public class MoonController : MonoBehaviour{
     public Sprite[] sprites;
     public int indexOfBloodMoon;
     public int indexOfDarkMoon;
+    public BackgroundController background;
 
     private float moonChangeTimeCount;
     private float mireiTimeCounter;
@@ -40,10 +41,12 @@ public class MoonController : MonoBehaviour{
             player.startTsuyoTsuyoMode();
             boosting = true;
             speedIncreasing = false;
+            background.BloodSky();
         } else if (spriteIndex % sprites.Length == (indexOfBloodMoon + 1) % sprites.Length  && !speedIncreasing){
             player.SpeedUp();
             speedIncreasing = true;
             boosting = false;
+            background.NormalSky();
         }
 
         // If it's dark moon, generate mirei eye
@@ -62,6 +65,7 @@ public class MoonController : MonoBehaviour{
         mireiTime = false;
         spriteIndex = 0;
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex % sprites.Length];
+        background.NormalSky();
         StopCoroutine("MireiTime");
     }
 
