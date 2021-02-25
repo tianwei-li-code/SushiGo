@@ -18,7 +18,6 @@ public class BuffGenerator : MonoBehaviour{
         itemGenerator = FindObjectOfType<ItemGenerator>();
         friendsGenerator = FindObjectOfType<FriendsGenerator>();
         Reset();
-        StartCoroutine(Counter());
     }
 
     // Update is called once per frame
@@ -39,6 +38,14 @@ public class BuffGenerator : MonoBehaviour{
 
     public void Reset(){
         timeInterval = Random.Range(minTimeInterval, maxTimeInterval);
+    }
+
+    public void Pause(){
+        StopCoroutine("Counter");
+    }
+
+    public void StartCounter(){
+        StartCoroutine("Counter");
     }
 
     private IEnumerator Counter(){

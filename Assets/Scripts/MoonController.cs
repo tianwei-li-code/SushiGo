@@ -20,7 +20,6 @@ public class MoonController : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-        StartCoroutine(Counter());
         player = FindObjectOfType<PlayerController>();
         mireiEyeGenerator = FindObjectOfType<MireiEyeGenerator>();
         Reset();
@@ -67,6 +66,15 @@ public class MoonController : MonoBehaviour{
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex % sprites.Length];
         background.NormalSky();
         StopCoroutine("MireiTime");
+    }
+
+    public void Pause(){
+        StopCoroutine("Counter");
+        StopCoroutine("MireiTime");
+    }
+
+    public void StartCounter(){
+        StartCoroutine("Counter");
     }
 
     private IEnumerator Counter(){

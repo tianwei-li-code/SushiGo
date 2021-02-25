@@ -39,11 +39,14 @@
      <Compile Include="Assets\Scripts\BackgroundController.cs" />
      <Compile Include="Assets\Scripts\BuffGenerator.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CreditMenu.cs" />
+     <Compile Include="Assets\Scripts\DeathMenu.cs" />
      <Compile Include="Assets\Scripts\FriendsGenerator.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\ItemEliminator.cs" />
      <Compile Include="Assets\Scripts\ItemGenerator.cs" />
      <Compile Include="Assets\Scripts\KomoriBatController.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ManaController.cs" />
      <Compile Include="Assets\Scripts\MireiEyeController.cs" />
      <Compile Include="Assets\Scripts\MireiEyeGenerator.cs" />

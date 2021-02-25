@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour{
     public float boostSpeedMultiplier;
     public float maxSpeedMultiplier;
     public float animSpeed;
+    public bool stopMoving;
     
 
     private Rigidbody2D myRigidbody;
     private Collider2D myCollider;
     private Animator myAnimator;
+    private AnimatorStateInfo animatorInfo;
     private bool grounded;
     private bool isJumping;
     private int jumpNumCounter;
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour{
     private float originAnimSpeed;
     private float currentAnimSpeed;
     private bool tsuyoTsuyoMode;
+    private bool dead;
 
     // Use this for initialization
     void Start(){
@@ -40,18 +43,20 @@ public class PlayerController : MonoBehaviour{
         originAnimSpeed = animSpeed;
         currentAnimSpeed = animSpeed;
         tsuyoTsuyoMode = false;
+        dead = false;
+        stopMoving = true;
     }
 
     // Update is called once per frame
     void Update(){
 
         // Move forward automatically
-        myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
+        myRigidbody.velocity = stopMoving ? new Vector2(0, myRigidbody.velocity.y) : new Vector2(moveSpeed, myRigidbody.velocity.y);
 
         // Press Space to jump only when player is on the ground
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
 
-        if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && jumpNumCounter>0){
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && jumpNumCounter>0 && !stopMoving){
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
             isJumping = true;
             jumpNumCounter--;
@@ -76,6 +81,13 @@ public class PlayerController : MonoBehaviour{
         myAnimator.SetBool("grounded",grounded);
         myAnimator.SetFloat("animSpeed",animSpeed);
         myAnimator.SetBool("tsuyoTsuyoMode",tsuyoTsuyoMode);
+        myAnimator.SetBool("dead",dead);
+
+        // Check if player is dead and death animation is end
+        animatorInfo = myAnimator.GetCurrentAnimatorStateInfo(0);
+        if(dead && animatorInfo.IsName("PlayerDeath") && animatorInfo.normalizedTime >= 1.0f){
+            gameManager.RestartGame();
+        }
     }
 
     // Enter tsuyo-tsuyo mode, increase speed and change the sprites
@@ -98,12 +110,12 @@ public class PlayerController : MonoBehaviour{
 
     // Reset the animator status and speed after respawn
     public void Respawn(){
-        myAnimator.SetBool("dead",false);
         moveSpeed = originSpeed;
         animSpeed = originAnimSpeed;
         currentSpeed = moveSpeed;
         currentAnimSpeed = animSpeed;
         tsuyoTsuyoMode = false;
+        dead = false;
         disableDoubleJump();
     }
 
@@ -135,10 +147,9 @@ public class PlayerController : MonoBehaviour{
 
     // Player die
     public void Die(){
-        moveSpeed = 0;
+        stopMoving = true;
+        dead = true;
         myAnimator.SetTrigger("hurt");
-        myAnimator.SetBool("dead",true);
-        gameManager.RestartGame();
     }
 
     // Dead condition check

@@ -1,13 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackgroundController
     - BuffGenerator
     - CameraController
+    - DeathMenu
     - FriendsGenerator
     - GameManager
     - ItemEliminator
     - ItemGenerator
     - KomoriBatController
+    - MainMenu
     - ManaController
     - MireiEyeController
     - MireiEyeGenerator
@@ -33,8 +36,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -43,6 +48,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -80,55 +86,63 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11270}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11416}
+      Script: {instanceID: 11412}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11608}
+      Script: {instanceID: 11604}
+    - Class: 114
+      Script: {instanceID: 11614}
     - Class: 114
       Script: {instanceID: 11618}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 12166}
+      Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 12284}
+      Script: {instanceID: 12290}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12372}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 12538}
     - Class: 114
-      Script: {instanceID: 12542}
+      Script: {instanceID: 12786}
     - Class: 114
       Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 13126}
+      Script: {instanceID: 13122}
     - Class: 114
-      Script: {instanceID: 13138}
+      Script: {instanceID: 13134}
     - Class: 114
-      Script: {instanceID: 13442}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13780}
+      Script: {instanceID: 13776}
     - Class: 114
-      Script: {instanceID: 14224}
+      Script: {instanceID: 14220}
     - Class: 114
-      Script: {instanceID: 14394}
+      Script: {instanceID: 14338}
     - Class: 114
-      Script: {instanceID: 14498}
+      Script: {instanceID: 14392}
+    - Class: 114
+      Script: {instanceID: 14496}
+    - Class: 114
+      Script: {instanceID: 18778}
+    - Class: 114
+      Script: {instanceID: 21504}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -472,7 +486,7 @@ ScriptsOnlyBuild:
     className: ScoreManager
   - hash:
       serializedVersion: 2
-      Hash: ae9c70aa3d35bd058375954429204c40
+      Hash: f7e6e9a47517012e98c439c69ca5b375
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -526,7 +540,7 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: 6a757c12646d0d0aa65aabff7797f63e
+      Hash: e01b3a8c0606b7cce96875a047dec2b7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -694,6 +708,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: f9144f0e27e91faf37747c1a33f56887
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgroundController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
@@ -748,10 +768,22 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 2452b157f2b94dd8dac16a5ff7f22b1e
+      Hash: 609aa4cb95af7dc3ae98738f1a44ab04
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoonController
+  - hash:
+      serializedVersion: 2
+      Hash: c25c23ab67d0dd42607278c413ac0713
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 80c6a830f60e59c55566b6130d720505
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathMenu
   platform: 5
   scenePathNames:
   - Assets/Scenes/Endless.unity
