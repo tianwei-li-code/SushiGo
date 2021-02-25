@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - BackgroundController
     - BuffGenerator
     - CameraController
+    - CreditMenu
     - DeathMenu
     - FriendsGenerator
     - GameManager
@@ -36,10 +37,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -47,6 +46,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -102,47 +102,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 11796}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 12290}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 12292}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 12340}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12376}
+    - Class: 114
+      Script: {instanceID: 12542}
     - Class: 114
       Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 12992}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 13010}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13088}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 14220}
+      Script: {instanceID: 13444}
     - Class: 114
-      Script: {instanceID: 14338}
+      Script: {instanceID: 13782}
     - Class: 114
-      Script: {instanceID: 14392}
+      Script: {instanceID: 14226}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 14328}
     - Class: 114
-      Script: {instanceID: 18778}
+      Script: {instanceID: 14344}
     - Class: 114
-      Script: {instanceID: 21504}
+      Script: {instanceID: 14398}
+    - Class: 114
+      Script: {instanceID: 14502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -318,6 +322,12 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: 3c0518cb6f421be3a9bec2b6617836a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathMenu
+  - hash:
+      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -432,6 +442,12 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
+      Hash: f97b1e46b35b1fb2e384c04ef045905f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CreditMenu
+  - hash:
+      serializedVersion: 2
       Hash: 5cc439bf63c0539d39588e69465ac2ab
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -522,6 +538,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 62a2d2143fac6f608a33705f13dec200
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -540,7 +562,7 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: e01b3a8c0606b7cce96875a047dec2b7
+      Hash: f93e9f6a435725a839a184b05423a88b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -772,19 +794,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoonController
-  - hash:
-      serializedVersion: 2
-      Hash: c25c23ab67d0dd42607278c413ac0713
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 80c6a830f60e59c55566b6130d720505
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DeathMenu
   platform: 5
   scenePathNames:
   - Assets/Scenes/Endless.unity
-  playerPath: C:/Users/94742/Desktop/SushiGo_0.01/SushiGoGo.exe
+  playerPath: C:/Users/94742/Desktop/SushiGo/SushiGo.exe

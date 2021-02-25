@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour{
     private PlatformDestroyer[] items;
     private BuffGenerator buffGenerator;
     public DeathMenu deathMenu;
-    public MainMenu mainMenu;
     public int gameStartWaitingTime;
     private int startWaitingTimeCounter;
     public GameObject countdown;
@@ -40,9 +39,6 @@ public class GameManager : MonoBehaviour{
 
     // Game start
     public void StartGame(){
-
-        // Deactivate main menu
-        mainMenu.gameObject.SetActive(false);
 
         // Activate score
         scoreCount.SetActive(true);
@@ -70,9 +66,6 @@ public class GameManager : MonoBehaviour{
 
     // Reset game
     public void Reset(){
-
-        // Deactivate death menu
-        deathMenu.gameObject.SetActive(false);
 
         // Destroy all items who have PlatformDestroyer Script
         items = FindObjectsOfType<PlatformDestroyer>();

@@ -23,7 +23,7 @@ public class ScoreManager : MonoBehaviour{
             PlayerPrefs.SetInt("HighScore", highScoreCount);
         }
 
-        scoreText.text = "X " + scoreCount;
+        scoreText.text = scoreCount.ToString();
     }
 
     public void AddScore(int points){
