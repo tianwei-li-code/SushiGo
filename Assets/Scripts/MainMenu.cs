@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour{
     public GameObject startIcon;
     public GameObject creditIcon;
     public GameObject quitIcon;
+    public AudioSource buttonSound;
     
     private GameManager gameManager;
 
@@ -34,6 +35,7 @@ public class MainMenu : MonoBehaviour{
 
     public void ShowStartIcon(){
         startIcon.SetActive(true);
+        buttonSound.Play();
     }
 
     public void HideStartIcon(){
@@ -42,6 +44,7 @@ public class MainMenu : MonoBehaviour{
 
     public void ShowCreditIcon(){
         creditIcon.SetActive(true);
+        buttonSound.Play();
     }
 
     public void HideCreditIcon(){
@@ -50,6 +53,7 @@ public class MainMenu : MonoBehaviour{
 
     public void ShowQuitIcon(){
         quitIcon.SetActive(true);
+        buttonSound.Play();
     }
 
     public void HideQuitIcon(){

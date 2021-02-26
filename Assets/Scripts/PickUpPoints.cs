@@ -9,11 +9,13 @@ public class PickUpPoints : MonoBehaviour{
     private Vector3 sushiUIPosition;
     private ScoreManager scoreManager;
     private Vector3 originPosition;
+    private AudioSource sushiSound;
 
     // Start is called before the first frame update
     void Start(){
         scoreManager = FindObjectOfType<ScoreManager>();
         originPosition = transform.position;
+        sushiSound = GameObject.Find("Bo").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,13 @@ public class PickUpPoints : MonoBehaviour{
         if(other.gameObject.tag == "Player" || (other.gameObject.tag == "Oto" && 
                                                 !other.gameObject.GetComponent<OtoDragonController>().canBeActivated)){
             getSushi = true;
+
+            if(sushiSound.isPlaying){
+                sushiSound.Stop();
+                sushiSound.Play();
+            } else {
+                sushiSound.Play();
+            }
         }
     }
 

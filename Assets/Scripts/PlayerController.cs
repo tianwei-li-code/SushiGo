@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour{
     public float maxSpeedMultiplier;
     public float animSpeed;
     public bool stopMoving;
+    public AudioSource jumpSound;
+    public AudioSource deathSound;
+    public AudioSource doubleJumpSound;
+    public AudioSource runSound;
     
 
     private Rigidbody2D myRigidbody;
@@ -29,6 +33,8 @@ public class PlayerController : MonoBehaviour{
     private float currentAnimSpeed;
     private bool tsuyoTsuyoMode;
     private bool dead;
+    private float runSoundPitch;
+    private float currentSoundPitch;
 
     // Use this for initialization
     void Start(){
@@ -42,6 +48,8 @@ public class PlayerController : MonoBehaviour{
         currentSpeed = moveSpeed;
         originAnimSpeed = animSpeed;
         currentAnimSpeed = animSpeed;
+        runSoundPitch = runSound.pitch;
+        currentSoundPitch = runSoundPitch;
         tsuyoTsuyoMode = false;
         dead = false;
         stopMoving = true;
@@ -53,6 +61,10 @@ public class PlayerController : MonoBehaviour{
         // Move forward automatically
         myRigidbody.velocity = stopMoving ? new Vector2(0, myRigidbody.velocity.y) : new Vector2(moveSpeed, myRigidbody.velocity.y);
 
+        if(!isJumping && !runSound.isPlaying && !stopMoving){
+            runSound.Play();
+        }
+
         // Press Space to jump only when player is on the ground
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
 
@@ -61,10 +73,19 @@ public class PlayerController : MonoBehaviour{
             isJumping = true;
             jumpNumCounter--;
 
-            // Double jump animation
+            // Play jump sound when first jump
+            if(jumpNumCounter == jumpNum - 1){
+                jumpSound.Play();
+            }
+
+            // Double jump animation and sound
             if(jumpNum > 1 && jumpNumCounter == jumpNum - 2){
                 myAnimator.SetTrigger("doubleJump");
+                doubleJumpSound.Play();
             }
+
+            // Stop playing run sound
+            runSound.Stop();
         }
         
         
@@ -83,8 +104,9 @@ public class PlayerController : MonoBehaviour{
         myAnimator.SetBool("tsuyoTsuyoMode",tsuyoTsuyoMode);
         myAnimator.SetBool("dead",dead);
 
-        // Check if player is dead and death animation is end
         animatorInfo = myAnimator.GetCurrentAnimatorStateInfo(0);
+
+        // When death animation end, restart game
         if(dead && animatorInfo.IsName("PlayerDeath") && animatorInfo.normalizedTime >= 1.0f){
             gameManager.RestartGame();
         }
@@ -100,11 +122,13 @@ public class PlayerController : MonoBehaviour{
     public void SpeedUp(){
         moveSpeed = currentSpeed;
         animSpeed = currentAnimSpeed;
+        runSound.pitch = currentSoundPitch;
         tsuyoTsuyoMode = false;
         if(moveSpeed * speedMultiplier < originSpeed * maxSpeedMultiplier){
             IncreaseSpeed(speedMultiplier);
             currentSpeed = moveSpeed;
             currentAnimSpeed = animSpeed;
+            currentSoundPitch = runSound.pitch;
         }
     }
 
@@ -114,6 +138,8 @@ public class PlayerController : MonoBehaviour{
         animSpeed = originAnimSpeed;
         currentSpeed = moveSpeed;
         currentAnimSpeed = animSpeed;
+        runSound.pitch = runSoundPitch;
+        currentSoundPitch = runSoundPitch;
         tsuyoTsuyoMode = false;
         dead = false;
         disableDoubleJump();
@@ -150,18 +176,21 @@ public class PlayerController : MonoBehaviour{
         stopMoving = true;
         dead = true;
         myAnimator.SetTrigger("hurt");
+        runSound.Stop();
+        deathSound.Play();
     }
 
     // Dead condition check
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Killbox"){
+        if(other.gameObject.tag == "Killbox" && !dead){
             Die();
         }
     }
 
     // Increase player's speed
      private void IncreaseSpeed(float SpeedMultiplier){
-        moveSpeed = moveSpeed * SpeedMultiplier;
-        animSpeed = animSpeed * SpeedMultiplier;
+        moveSpeed *= SpeedMultiplier;
+        animSpeed *= SpeedMultiplier;
+        runSound.pitch *= SpeedMultiplier;
     }
 }

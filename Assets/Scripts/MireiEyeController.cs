@@ -16,6 +16,7 @@ public class MireiEyeController : MonoBehaviour{
     private bool beamEnd;
     private bool beamLock;
     private AnimatorStateInfo animatorInfo;
+    private AudioSource beamSound;
     
     
     
@@ -29,6 +30,7 @@ public class MireiEyeController : MonoBehaviour{
         eyePosition = GameObject.FindGameObjectWithTag("EyePosition");
         eyeRecoverPoint = GameObject.FindGameObjectWithTag("ItemRecoverPoint");
         gameObject.SetActive(false);
+        beamSound = GameObject.Find("BeamSound").GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -87,6 +89,10 @@ public class MireiEyeController : MonoBehaviour{
         beamLock = false;
         gameObject.SetActive(true);
         EnterCamera();
+    }
+
+    public void EmissionSound(){
+        beamSound.Play();
     }
 
     private void EnterCamera(){

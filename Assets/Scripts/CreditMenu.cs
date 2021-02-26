@@ -5,6 +5,8 @@ using UnityEngine;
 public class CreditMenu : MonoBehaviour{
     public MainMenu mainMenu;
     public GameObject mainMenuIcon;
+    public AudioSource buttonSound;
+
     public void MainMenu(){
         mainMenu.gameObject.SetActive(true);
         ResetAllIcons();
@@ -13,6 +15,7 @@ public class CreditMenu : MonoBehaviour{
 
     public void ShowMainMenuIcon(){
         mainMenuIcon.SetActive(true);
+        buttonSound.Play();
     }
 
     public void HideMainMenuIcon(){

@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour{
     private int startWaitingTimeCounter;
     public GameObject countdown;
     public GameObject scoreCount;
+    public AudioSource bgm;
+    private float bgmVolume;
+    public AudioSource countdownSound;
+    public AudioSource countdownEndSound;
     
 
     // Start is called before the first frame update
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour{
         scoreManager = FindObjectOfType<ScoreManager>();
         moonController = FindObjectOfType<MoonController>();
         buffGenerator = FindObjectOfType<BuffGenerator>();
+        bgmVolume = bgm.volume;
     }
 
     // Update is called once per frame
@@ -55,6 +60,7 @@ public class GameManager : MonoBehaviour{
 
         // Activate death menu
         deathMenu.gameObject.SetActive(true);
+        deathMenu.ShowFinalScore();
 
         // Deactivate score
         scoreCount.SetActive(false);
@@ -62,6 +68,9 @@ public class GameManager : MonoBehaviour{
         // Stop all Coroutines
         moonController.Pause();
         buffGenerator.Pause();
+
+        // Stop BGM
+        StartCoroutine("FadeOutBGM");
     }
 
     // Reset game
@@ -97,13 +106,16 @@ public class GameManager : MonoBehaviour{
         countdown.SetActive(true);
 
         while(startWaitingTimeCounter > 0){
-            // Change count down text
+            // Change countdown text
             t.text = startWaitingTimeCounter.ToString();
+
+            // Play countdown sound
+            countdownSound.Play();
 
             yield return new WaitForSeconds(1);
             startWaitingTimeCounter--;
 
-            // When count down over
+            // When countdown over
             if(startWaitingTimeCounter <= 0){
 
                 // Player start moving
@@ -115,12 +127,19 @@ public class GameManager : MonoBehaviour{
 
                 // Fade out GO
                 t.text = "GO";
-                StartCoroutine("FadeOut");
+                StartCoroutine("FadeOutText");
+
+                // Play countdown end sound
+                countdownEndSound.Play();
+
+                // Play BGM
+                bgm.Play();
+                StartCoroutine("FadeInBGM");
             }
         }
     }
 
-    private IEnumerator FadeOut(){
+    private IEnumerator FadeOutText(){
         Text t = countdown.GetComponent<Text>();
         float fadeOutTime = 2.5f;
         while(t.color.a > 0f){
@@ -130,5 +149,25 @@ public class GameManager : MonoBehaviour{
 
         // Deactivate count down
         countdown.SetActive(false);
+    }
+
+    private IEnumerator FadeOutBGM(){
+        float fadeOutTime = 2.5f;
+        while(bgm.volume > 0f){
+            bgm.volume -= bgmVolume * Time.deltaTime / fadeOutTime;
+            yield return null;
+        }
+
+        // Stop BGM
+        bgm.Stop();
+    }
+
+    private IEnumerator FadeInBGM(){
+        float fadeInTime = 2.5f;
+        bgm.volume = 0;
+        while(bgm.volume < bgmVolume){
+            bgm.volume += bgmVolume/( fadeInTime/Time.deltaTime);
+            yield return null;
+        }
     }
 }
