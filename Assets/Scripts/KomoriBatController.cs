@@ -13,6 +13,7 @@ public class KomoriBatController : MonoBehaviour{
     private bool canBeActivated;
     private Rigidbody2D komoriRigidbody;
     private GameObject terminalPoint;
+    private AudioSource getSound;
 
     // Start is called before the first frame update
     void Start(){
@@ -20,6 +21,7 @@ public class KomoriBatController : MonoBehaviour{
         komoriRigidbody = GetComponent<Rigidbody2D>();
         terminalPoint = GameObject.FindGameObjectWithTag("ItemRecoverPoint");
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        getSound = GameObject.Find("Mua").GetComponent<AudioSource>();
         Reset();
     }
 
@@ -62,6 +64,7 @@ public class KomoriBatController : MonoBehaviour{
     // When player get komori bat, start buff time counter and activate double jump ability for player
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" && canBeActivated){
+            getSound.Play();
             player.enableDoubleJump();
             buffLastTimeCount = buffLastTime;
             canBeActivated = false;

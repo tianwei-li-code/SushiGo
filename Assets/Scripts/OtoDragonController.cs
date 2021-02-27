@@ -16,6 +16,7 @@ public class OtoDragonController : MonoBehaviour{
     private float defaultRadius;
     private CircleCollider2D otoCollider;
     private GameObject terminalPoint;
+    private AudioSource getSound;
 
     // Start is called before the first frame update
     void Start(){
@@ -25,6 +26,7 @@ public class OtoDragonController : MonoBehaviour{
         terminalPoint = GameObject.FindGameObjectWithTag("ItemRecoverPoint");
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         defaultRadius = otoCollider.radius;
+        getSound = GameObject.Find("Mua").GetComponent<AudioSource>();
         Reset();
     }
 
@@ -70,6 +72,7 @@ public class OtoDragonController : MonoBehaviour{
     private void OnTriggerEnter2D(Collider2D other) {
         // When player get oto dragon, start buff time counter and activate magnet ability
         if(other.gameObject.tag == "Player" && canBeActivated){
+            getSound.Play();
             otoCollider.radius *= radiusMultiplier;
             buffLastTimeCount = buffLastTime;
             canBeActivated = false;

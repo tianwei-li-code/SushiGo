@@ -6,6 +6,7 @@ public class ManaController : MonoBehaviour{
     
     public float speedMultiplier;
     public GameObject manaRecoverPoint;
+    public AudioSource dashSound;
 
     private float moveSpeed;
     private Rigidbody2D manaRigidbody;
@@ -13,6 +14,7 @@ public class ManaController : MonoBehaviour{
     private Animator manaAnimator;
     private PlayerController nano;
     private float animSpeed;
+    private bool soundPlaying;
 
     // Start is called before the first frame update
     void Start(){
@@ -28,6 +30,7 @@ public class ManaController : MonoBehaviour{
     void Update(){
         this.moveSpeed = nano.moveSpeed * speedMultiplier;
         this.animSpeed = nano.animSpeed;
+        this.dashSound.pitch = nano.runSound.pitch * speedMultiplier;
 
         manaAnimator.SetFloat("animSpeed",animSpeed);
 
@@ -36,11 +39,18 @@ public class ManaController : MonoBehaviour{
         if(transform.position.x >= manaRecoverPoint.transform.position.x){
             reset();
         }
+
+        if(gameObject.activeInHierarchy && !soundPlaying){
+            dashSound.Play();
+            soundPlaying = true;
+        }
     }
 
     public void reset(){
         if(gameObject.activeInHierarchy){
             gameObject.SetActive(false);
+            dashSound.Stop();
+            soundPlaying = false;
         }
     }
 }

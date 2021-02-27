@@ -42,6 +42,7 @@
      <Compile Include="Assets\Scripts\CreditMenu.cs" />
      <Compile Include="Assets\Scripts\DeathMenu.cs" />
      <Compile Include="Assets\Scripts\FriendsGenerator.cs" />
+     <Compile Include="Assets\Scripts\FullScrennToggle.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\ItemEliminator.cs" />
      <Compile Include="Assets\Scripts\ItemGenerator.cs" />

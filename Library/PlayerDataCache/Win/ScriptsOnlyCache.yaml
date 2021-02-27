@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - CreditMenu
     - DeathMenu
     - FriendsGenerator
+    - FullScrennToggle
     - GameManager
     - ItemEliminator
     - ItemGenerator
@@ -40,7 +41,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateEditor
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -56,6 +56,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/Endless.unity:
     - Class: 1
@@ -81,6 +82,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -149,7 +154,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14400}
     - Class: 114
+      Script: {instanceID: 14420}
+    - Class: 114
       Script: {instanceID: 14504}
+    - Class: 114
+      Script: {instanceID: 26554}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -325,7 +334,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 3c0518cb6f421be3a9bec2b6617836a4
+      Hash: 0d1be427a3ec188ef3380802c3d9257d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DeathMenu
@@ -397,7 +406,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 44a1ed16182bc364b586c03720319b67
+      Hash: 093d272cfbb4cfc8f05526e02cfa8d75
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ManaController
@@ -445,7 +454,7 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
-      Hash: f97b1e46b35b1fb2e384c04ef045905f
+      Hash: 6150ef0eb2eef855cb06ebcb7c6ef450
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CreditMenu
@@ -505,7 +514,7 @@ ScriptsOnlyBuild:
     className: ScoreManager
   - hash:
       serializedVersion: 2
-      Hash: f7e6e9a47517012e98c439c69ca5b375
+      Hash: 015af560a1959677cc9a8d0e04a47bc6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -541,7 +550,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 62a2d2143fac6f608a33705f13dec200
+      Hash: 78443c04351a242d6376600d44cac353
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -565,7 +574,7 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: f93e9f6a435725a839a184b05423a88b
+      Hash: ca1320c9355d360eec8546959671c0de
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -797,6 +806,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoonController
+  - hash:
+      serializedVersion: 2
+      Hash: 9186942832c368dbfdcb4c356af1ed44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FullScrennToggle
   platform: 5
   scenePathNames:
   - Assets/Scenes/Endless.unity
