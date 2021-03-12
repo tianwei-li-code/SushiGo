@@ -17,6 +17,7 @@ public class MireiEyeController : MonoBehaviour{
     private bool beamLock;
     private AnimatorStateInfo animatorInfo;
     private AudioSource beamSound;
+    private float distanse;
     
     
     
@@ -31,6 +32,7 @@ public class MireiEyeController : MonoBehaviour{
         eyeRecoverPoint = GameObject.FindGameObjectWithTag("ItemRecoverPoint");
         gameObject.SetActive(false);
         beamSound = GameObject.Find("BeamSound").GetComponent<AudioSource>();
+        distanse = eyePosition.transform.position.x - playerObj.transform.position.x;
     }
 
     void Update() {
@@ -64,17 +66,17 @@ public class MireiEyeController : MonoBehaviour{
 
         // Waiting to leave
         if(beamEnd && stopMove){
-            transform.position = new Vector3 (eyePosition.transform.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3 (playerObj.transform.position.x + distanse, transform.position.y, transform.position.z);
         }
         
         // Beam Ready status
         if(transform.position.x < eyePosition.transform.position.x && !beamEnd){
             // Stop moving
-            mireiRigidbody.velocity = new Vector2(0, mireiRigidbody.velocity.y);
+            mireiRigidbody.velocity = new Vector2(0, 0);
 
             // Change height
             float height = beamLock ? transform.position.y : playerObj.transform.position.y;
-            transform.position = new Vector3 (eyePosition.transform.position.x, height, transform.position.z);
+            transform.position = new Vector3 (playerObj.transform.position.x + distanse, height, transform.position.z);
 
             if(!stopMove){
                 mireiAnimator.SetTrigger("BeamReady");

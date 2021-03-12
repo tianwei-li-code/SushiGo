@@ -136,29 +136,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13012}
     - Class: 114
-      Script: {instanceID: 13090}
+      Script: {instanceID: 13086}
     - Class: 114
-      Script: {instanceID: 13130}
+      Script: {instanceID: 13092}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 13132}
     - Class: 114
-      Script: {instanceID: 13446}
+      Script: {instanceID: 13144}
     - Class: 114
-      Script: {instanceID: 13784}
+      Script: {instanceID: 13448}
     - Class: 114
-      Script: {instanceID: 14228}
+      Script: {instanceID: 13786}
     - Class: 114
-      Script: {instanceID: 14330}
+      Script: {instanceID: 14230}
     - Class: 114
-      Script: {instanceID: 14346}
+      Script: {instanceID: 14332}
     - Class: 114
-      Script: {instanceID: 14400}
+      Script: {instanceID: 14348}
     - Class: 114
-      Script: {instanceID: 14420}
+      Script: {instanceID: 14402}
     - Class: 114
-      Script: {instanceID: 14504}
+      Script: {instanceID: 14422}
     - Class: 114
-      Script: {instanceID: 26554}
+      Script: {instanceID: 14506}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -568,6 +568,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 9186942832c368dbfdcb4c356af1ed44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FullScrennToggle
+  - hash:
+      serializedVersion: 2
       Hash: 27ebaa633e4f4014a4763e0bff2ae3e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -806,13 +812,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoonController
-  - hash:
-      serializedVersion: 2
-      Hash: 9186942832c368dbfdcb4c356af1ed44
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FullScrennToggle
   platform: 5
   scenePathNames:
   - Assets/Scenes/Endless.unity
-  playerPath: C:/Users/94742/Desktop/SushiGo/SushiGo.exe
+  playerPath: D:/SushiGo/SushiGo.exe
